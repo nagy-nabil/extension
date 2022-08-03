@@ -1,7 +1,6 @@
-
-async function changeValue(tags){
+ function changeValue(tags){
     console.log("enter")
-    console.log("tags",await tags)
+    console.log("tags",tags)
     document.addEventListener("scroll",()=>{
         let all=document.querySelectorAll('[role="feed"]')[0]
         // console.log(all);
@@ -53,7 +52,7 @@ async function get_tags(){
     console.log(result.RMtags)
     // result=await result.RMtags
     // console.log('result',result)
-    changeValue(await result.RMtags)
+    changeValue(result.RMtags)
 }
 async function store_tag(name){
     chrome.storage.sync.set({RMtags:{[name]:true} }, function() {

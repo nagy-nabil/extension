@@ -44,6 +44,7 @@ export async function script(tags){
     try{//handle any uncaught errors
         // const mod= await import("./tags_mod/tags.js")
         // let tags= mod.default
+        if(!tags) throw new Error("no tags")
         console.log("tags from script",tags)
         //listen to all the posible events
         document.addEventListener("scroll",()=>{

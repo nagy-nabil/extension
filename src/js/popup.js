@@ -42,9 +42,7 @@ async function scriptInject (){
         chrome.scripting.executeScript({
             target: { tabId: tab.id },
             // files: ["src/js/script.js"],//file path must be relative to manifest
-            func:()=>{
-                script(tags)
-            },
+            func:script,
             args:[tags]
         });
     }

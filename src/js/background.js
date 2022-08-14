@@ -5,7 +5,9 @@ chrome.runtime.onInstalled.addListener(() => {
   "صاحبي":true,
 "Harry":true,
 "S06":true,
-"time":true}
+"time":true,
+"pS5":true,
+"bETEr":true}
 });
 });
 

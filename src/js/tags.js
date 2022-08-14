@@ -13,5 +13,10 @@ export async function get_tags(){
     
     // console.log("after")
 }
+export async function set_tags(tags){
+    chrome.storage.sync.set({RMtags:tags}, function() {
+        console.log('Value is set to ' + tags);
+    });
+}
 let tags =await get_tags()
 export default  tags
